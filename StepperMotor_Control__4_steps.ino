@@ -12,7 +12,7 @@
 * Then repeat step2 - step 5
 */
 
-int switch_s1 = 8; // the switch used to control the stepper motor
+int switch_s1 = 0; // the switch used to control the stepper motor
 boolean flag = true; // a flag used to stop doing  
 
 // Initialize function
