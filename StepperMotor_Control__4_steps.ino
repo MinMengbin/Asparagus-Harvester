@@ -2,7 +2,7 @@
  *  Oct 7, 2017
  *  Email: prlatlab@gmail.com; robotintheworld@163.com
  *  http://prllab.wixsite.com/prl-lab-en
- *  
+ *  Author: Mengbin (Mike) Min
 * This project is used to control a stepper motor which is implented on the project of asparagus harvester 
 * Step 1: Power on, initialize system such as setting pin 0 as an input to control the stepper motor 
 * Step 2: Press switch and release, stepper motor rotate clockwise only once to a fixed position, stop and wait
