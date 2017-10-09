@@ -56,7 +56,7 @@ void loop() {
        Serial.print("step 2: stepper motor rotate clockwise only once\n");
        Serial.print("Please press valve manual switch \n");
        // stepper motor rotate clockwise only once coding
-       stepper_CW;
+       stepper_CW();
        flag = false;
     }
   } 
@@ -70,7 +70,7 @@ void loop() {
        Serial.print("step 3: stepper motor rotate clockwise only once\n");
        Serial.print("Please press valve manual switch \n");
        // stepper motor rotate counterclockwise only once coding
-       stepper_CW;
+       stepper_CW();
        flag = false;
     }
   } 
