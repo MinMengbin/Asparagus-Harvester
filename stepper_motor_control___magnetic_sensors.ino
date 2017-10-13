@@ -17,7 +17,7 @@
 //https://cdn.fbsbx.com/v/t59.2708-21/17479905_1906213009658358_3061590844801810432_n.pdf/ST330_Stepper_Motor_Driver_Board_User_Manual.pdf?oh=8f9f634d6247e10944b3d605274e038d&oe=59DCF767&dl=1
 
 // Variables for the stepper motor driver
-const int stepsPerRevolution = 360;  // change this to fit the number of steps per revolution
+const int stepsPerRevolution = 30;  // change this to fit the number of steps per revolution
                                      // NEMA 23 has 200 steps 1.8 deg each, 50 represent turning shaft 90 degrees AND CUTER 180 DEG
 const int enableA = 6;
 const int enableB = 5;
@@ -41,17 +41,17 @@ void setup() {
  pinMode(enableA, OUTPUT);
  pinMode(enableB, OUTPUT); 
 
- myStepper.setSpeed(120); // SPEED OF MOTOR IN RPM
+ myStepper.setSpeed(60); // SPEED OF MOTOR IN RPM
 }
 
 void loop() {
   // put your main code here, to run repeatedly:  
   
   // step 2  
-  if ( digitalRead(mswitch_top) == HIGH && digitalRead(mswitch_bottom) == Low && flag == false )
+  if ( digitalRead(mswitch_top) == HIGH && digitalRead(mswitch_bottom) == LOW && flag == false )
   {
     delay(50);  // Waiting for switch stablizing
-    if ( digitalRead(mswitch_top) == HIGH && digitalRead(mswitch_bottom) == Low && flag == false )
+    if ( digitalRead(mswitch_top) == HIGH && digitalRead(mswitch_bottom) == LOW && flag == false )
     {
        Serial.print("step 2: stepper motor rotate clockwise only once\n");
        Serial.print("Please press valve manual switch \n");
@@ -85,8 +85,8 @@ void stepper_CW(){
   digitalWrite(enableA, HIGH);
   digitalWrite(enableB, HIGH);
   myStepper.step(stepsPerRevolution);
-  digitalWrite(enableA, LOW);
-  digitalWrite(enableB, LOW);
+//  digitalWrite(enableA, LOW);
+//  digitalWrite(enableB, LOW);
   delay(1000); 
 }
 
@@ -98,7 +98,7 @@ void stepper_CCW(){
   digitalWrite(enableA, HIGH);
   digitalWrite(enableB, HIGH);
   myStepper.step(stepsPerRevolution);
-  digitalWrite(enableA, LOW);
-  digitalWrite(enableB, LOW);
+//  digitalWrite(enableA, LOW);
+//  digitalWrite(enableB, LOW);
   delay(1000); 
 }

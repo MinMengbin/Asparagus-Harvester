@@ -13,7 +13,7 @@
 */
 
 #include <Stepper.h> // header file for stepper motor
-const int stepsPerRevolution = 25;  // change this to fit the number of steps per revolution
+const int stepsPerRevolution = 40;  // change this to fit the number of steps per revolution
 const int enableA = 6;
 const int enableB = 5;
 // initialize the stepper library using the default pins on the HBridge Shield:
@@ -31,7 +31,7 @@ void setup() {
  pinMode (enableA, OUTPUT);
  pinMode (enableA, OUTPUT);
  
- myStepper.setSpeed(150); // SPEED OF MOTOR IN RPM
+ myStepper.setSpeed(30); // SPEED OF MOTOR IN RPM
 }
 
 void loop() {
